@@ -7,13 +7,24 @@
     <link rel="stylesheet" href="CSS/index.css">
 </head>
 <body>
+    <script src="scrip.js"></script>
     <nav>
-        <label class="logo">So Pro</label>
-        <ul>
-        <li><a href="index.html">Home</a></li>
-         <li><a href="exploit.html">Exploit</a></li>
-         <li><a href="script.html">Script</a></li>   
-        </ul>
+        <div class="container">
+            <div class="nav-con">
+                <label class="logo">So Pro</label>
+                <ul class="menu" id="mymenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="exploit.html">Exploit</a></li>
+                    <li><a href="script.html">Script</a></li>   
+                    </ul>
+    
+                <div class="ham-menu" onclick="toggleHam (this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </div>
     </nav>
     <section></section>
 </body>
