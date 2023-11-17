@@ -102,7 +102,19 @@ a,a:hover{
         height: 100vh;
         background-color: #000000;
         top: 80px;
-
+        left: 0;
+        text-align: center;
+    }
+    nav li{
+        display: block;
+        margin: 50px;
+        line-height: 30px;
+    }
+    nav a{
+        font-size: 20px;{
+            border: none;
+            color: rgb(0, 130, 0);
+        }
     }
 }
 

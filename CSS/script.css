@@ -5,6 +5,11 @@
     list-style: none;
 }
 
+.nav-con {
+    display: flex;
+    justify-content: space-between;
+}
+
 body{
     font-family: monospace;
     background: url(dg2.jpg);
@@ -50,8 +55,115 @@ a,a:hover{
     transition: .5s;
 }
 
+.ham-menu {
+    display: inline-block;
+    cursor: pointer;
+    line-height: 80px;
+    padding: 0 50px;
+    position: absolute;
+    top: 2%;
+    right: 0;
+    }
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(0, 73, 0);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  /* Rotate first bar */
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  /* Fade out the second bar */
+  .change .bar2 {opacity: 0;}
+  
+  /* Rotate last bar */
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+  .menu-active {
+    display: block !important;
+  }
+
+@media only screen and (min-width: 560px) {
+    .ham-menu {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .menu {
+        display: none;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #000000;
+        top: 80px;
+        left: 0;
+        text-align: center;
+    }
+    nav li{
+        display: block;
+        margin: 50px;
+        line-height: 30px;
+    }
+}
+
 section{
     background: url(dg1.jpg);
     background-size: cover;
     height: calc(100vh - 80px);
+}
+
+.container2 {
+    padding: 0.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.products-con {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1rem;
+}
+
+.products-item {
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.products-item:hover {
+    outline: 2px solid rgb(0, 97, 0);
+}
+
+.products-img img {
+    width: 100%;
+}
+
+.products-detail {
+    padding: 0.5rem;
+    font-size: 15px;
+}
+
+.products-button {
+    padding: 0.5rem
+}
+
+.products-button button {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    background-color: rgb(0, 73, 0);
+    border: none;
+    padding: 10px 30px;
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+.products-button button:hover {
+    background-color: black
 }
